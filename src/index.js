@@ -1,17 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-const isMorning = true;
-const morningUser = "Good Morning!!";
-const afternoonUser = "Good Afternoon";
-
-const FirstComponent = () => {
-  return (
-    <>
-      <p>{isMorning ? morningUser : afternoonUser}</p>
-    </>
-  );
-};
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<FirstComponent />);
+root.render(<App />);
