@@ -1,7 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
-const p = React.createElement("p", {}, "Hello World");
-const div = React.createElement("div", {}, p);
+const isMorning = true;
+const morningUser = "Good Morning!!";
+const afternoonUser = "Good Afternoon";
+
+const FirstComponent = () => {
+  return (
+    <>
+      <p>{isMorning ? morningUser : afternoonUser}</p>
+    </>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(div);
+root.render(<FirstComponent />);
